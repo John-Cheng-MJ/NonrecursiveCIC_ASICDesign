@@ -1,0 +1,19 @@
+ncsim: 15.20-s022: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /home/Software/EDA/Cadence/INCISIVE/INCISIVE_15.20.022/tools/inca/files/ncsimrc
+ncsim> database -open waves -into waves.shm -default
+Created default SHM database waves
+ncsim> probe -create -shm Non_recursive_CIC1_tb.Out1_expected Non_recursive_CIC1_tb.Out1 Non_recursive_CIC1_tb.clk
+Created probe 1
+ncsim> run
+**************TEST COMPLETED (PASSED)**************
+Simulation stopped via $stop(1) at time 576060 NS + 0
+ncsim> ^C
+ncsim> exit
+...Regained control from SimVision
+-------------------------------------
+ncsim: Memory Usage - 30.3M program + 28.7M data = 58.9M total (63.0M Peak)
+ncsim: CPU Usage - 13.2s system + 11.7s user = 24.9s total (1681.7s, 1.5% cpu)

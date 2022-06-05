@@ -1,0 +1,1618 @@
+Checking out license 'RTL_Compiler_Ultra'... (0 seconds elapsed)
+License 'RTL_Compiler_Ultra' (main version: 14.2, alternate version: 14.2) checkout failed.
+Checking out license 'Genus_Synthesis'... (0 seconds elapsed)
+Reading GUI preferences file '/home/student6/.cadence/rc.gui'.
+Finished loading tool scripts (7 seconds elapsed)
+
+                                                        Cadence Encounter(R) RTL Compiler
+                                           Version RC14.27 - v14.20-s064_1 (64-bit), built Feb 26 2016
+
+
+Copyright notice: Copyright 1997-2015 Cadence Design Systems, Inc. All rights reserved worldwide. 
+
+WARNING: This version of RC is 2114 days old.
+         Visit downloads.cadence.com for the latest release of RC.
+
+
+=================================================================================================================================================
+                                                  Welcome to Cadence Encounter(R) RTL Compiler
+
+Here is a quick introduction on how to access our product information.  
+If you do not want this message to appear in the future, create an 
+initialization file (an empty file will do) in your home directory 
+called '~/.cadence/.synth_init'.
+
+  To access the product documentation in HTML and PDF, type 'cdnshelp'
+    at the system prompt. 
+  For a list of available commands, type 'help'. 
+  To view a man page for a command, type 'man <commandName>'.
+  To view a man page for an error message, type 'man <messageID>'.
+  For a list of all possible object types, type 'get_attribute -help'.
+  For a list of all available attributes by object type, type
+    'get_attribute * <object_type> -help'.
+  For a list of all attributes for every object type, type
+    'get_attribute * * -help'
+  To list only writable attributes, substitute 'get_attribute' with
+    'set_attribute'.
+  To get a template script to run RTL Compiler, use the 'write_template'
+    command.
+  To get a template script to run Conformal based on the current RTL
+    Compiler session, use the 'write_do_lec' command.
+  
+  Obsolete attributes in the current tool version.
+  To learn more, type 'get_attribute -help <attribute> <object>'.
+
+            object  attribute
+            ------  ---------
+       cpf_command  synthesize_complex_expressions
+    cpf_command_id  current_set_instance_macro
+    cpf_command_id  current_set_instance_module
+    cpf_command_id  done_in_apply_cpf
+    cpf_command_id  done_in_write_cpf
+    cpf_command_id  macro_definition_command
+    cpf_command_id  rc_command
+            design  base_mode
+            design  disable_power_mode_factorization
+            design  dp_perform_rewriting_operations
+            design  lp_clock_gating_hierarchical
+            design  lp_map_to_srpg_cells
+            design  lp_optimize_dynamic_power_first
+            design  lp_srpg_pg_driver
+          instance  black_box
+          instance  dft_inherited_dont_scan
+          instance  gint_has_connected_pg_pin
+          instance  lp_map_to_srpg_cells
+          instance  lp_map_to_srpg_type
+          instance  lp_srpg_pg_driver
+           libcell  black_box
+           libcell  location
+            libpin  q_pin_of_d_pin
+               net  hier_net
+               net  logic0_driven
+               net  logic1_driven
+      power_domain  library_domain_by_mode
+      power_domain  shutoff_signal
+      power_domain  shutoff_signal_polarity
+              root  auto_ungroup_min_effort
+              root  constant_prop_through_iso_cell
+              root  degenerate_complex_seqs
+              root  disable_power_mode
+              root  dp_perform_csa_operations
+              root  dp_perform_rewriting_operations
+              root  dp_perform_sharing_operations
+              root  dp_perform_speculation_operations
+              root  driver_for_unloaded_ports
+              root  enable_parallel_iopt
+              root  enc_in_place_opt
+              root  enc_opt_drv
+              root  hdl_flatten_array
+              root  hdl_old_reg_naming
+              root  hdl_reg_naming_style_scalar
+              root  hdl_reg_naming_style_vector
+              root  hdl_trim_target_index
+              root  hdl_use_params_in_cell_search
+              root  ignore_unknown_embedded_commands
+              root  lbr_async_clr_pre_seqs_interchangable
+              root  lp_clock_gating_hierarchical
+              root  lp_insert_clock_gating_incremental
+              root  lp_iopt_mvt_multipass_flow
+              root  lp_multi_vt_optimization_effort
+              root  ovf_mode
+              root  ovf_verification_directory
+              root  ple_parameter_source_priority
+              root  power_optimization_effort
+              root  pqos_virtual_buffer
+              root  retime_preserve_state_points
+              root  wlec_env_var
+              root  wlec_flat_r2n
+              root  wlec_no_exit
+              root  wlec_old_lp_ec_flow
+              root  wlec_save_ssion
+              root  wlec_sim_lib
+              root  wlec_sim_plus_lib
+              root  wlec_skip_iso_check_hier_compare
+              root  wlec_skip_lvl_check_hier_compare
+              root  wlec_verbose
+         subdesign  allow_csa_subdesign
+         subdesign  allow_sharing_subdesign
+         subdesign  allow_speculation_subdesign
+         subdesign  auto_ungroup_ok
+         subdesign  dp_perform_rewriting_operations
+         subdesign  lp_clock_gating_hierarchical
+
+Send us feedback at rc_feedback@cadence.com.
+=================================================================================================================================================
+
+Sourcing '../Scripts/MyModule_syn.tcl' (Fri Dec 10 14:14:00 +0300 2021)...
+Sourcing '../Source/Technology/X-FAB_typ.tcl' (Fri Dec 10 14:14:00 +0300 2021)...
+  Setting attribute of root '/': 'lib_search_path' = /Cadence/Libs/X_FAB/XKIT/xt018/diglibs/D_CELLS_HD/v4_0/liberty_LP5MOS/v4_0_0/PVT_1_80V_range
+
+  Message Summary for Library D_CELLS_HD_LP5MOS_typ_1_80V_25C.lib:
+  ****************************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 81
+  ****************************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 25.000000) in library 'D_CELLS_HD_LP5MOS_typ_1_80V_25C.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LGCNHDX0'
+        : To use the cell in clock gating, Set cell attribute 'dont_use' false in the library.
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LGCNHDX1'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LGCNHDX2'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LGCNHDX4'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LGCPHDX0'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LGCPHDX1'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LGCPHDX2'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LGCPHDX4'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCNHDX0'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCNHDX1'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCNHDX2'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCNHDX4'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCPHDX0'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCPHDX1'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCPHDX2'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSGCPHDX4'
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCNHDX0'
+Warning : Invalid pin name used. [LBR-146]
+        : Invalid pin-name (IQ) referenced in libcell LSOGCNHDX0
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCNHDX1'
+Warning : Invalid pin name used. [LBR-146]
+        : Invalid pin-name (IQ) referenced in libcell LSOGCNHDX1
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCNHDX2'
+Warning : Invalid pin name used. [LBR-146]
+        : Invalid pin-name (IQ) referenced in libcell LSOGCNHDX2
+Warning : Unusable clock gating integrated cell. [LBR-101]
+        : Clock gating integrated cell name: 'LSOGCNHDX4'
+Warning : Invalid pin name used. [LBR-146]
+        : Invalid pin-name (IQ) referenced in libcell LSOGCNHDX4
+Warning : Invalid pin name used. [LBR-146]
+        : Invalid pin-name (IQ) referenced in libcell LSOGCPHDX0
+Warning : Invalid pin name used. [LBR-146]
+        : Invalid pin-name (IQ) referenced in libcell LSOGCPHDX1
+Warning : Invalid pin name used. [LBR-146]
+        : Invalid pin-name (IQ) referenced in libcell LSOGCPHDX2
+Warning : Invalid pin name used. [LBR-146]
+        : Invalid pin-name (IQ) referenced in libcell LSOGCPHDX4
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'MPROBEBUHDX8' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Otherwise, the library cell will be marked as unusable and as timing model.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'MPROBEBUHDX8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'MPROBEHD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'MPROBEHD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED1HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED1HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED2HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED2HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED3HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED3HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED5HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED5HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED7HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED7HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED10HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED10HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED15HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED15HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED25HD' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FEED25HD' must have an output pin.
+  Setting attribute of root '/': 'library' = D_CELLS_HD_LP5MOS_typ_1_80V_25C.lib
+Warning : Site already defined before, duplicated site will be ignored. [PHYS-106]
+        : Site 'core_hd' read already, this site in file '/Cadence/Libs/X_FAB/XKIT/xt018/diglibs/D_CELLS_HD/v4_0/LEF/v4_0_0/xt018_xx43_MET4_METMID_METTHK_D_CELLS_HD_mprobe.lef' is ignored.
+
+  According to lef_library, there are total 6 routing layers [ V(3) / H(3) ]
+
+Warning : Wire parameter is missing. [PHYS-15]
+        : 'OFFSET' parameter is missing for layer 'MET1' [line 184 in file /Cadence/Libs/X_FAB/XKIT/xt018/cadence/v5_0/techLEF/v5_0_2/xt018_xx43_MET4_METMID_METTHK.lef]
+        : Check the parameter in technology section.
+Warning : Wire parameter is missing. [PHYS-15]
+        : 'OFFSET' parameter is missing for layer 'MET3' [line 245 in file /Cadence/Libs/X_FAB/XKIT/xt018/cadence/v5_0/techLEF/v5_0_2/xt018_xx43_MET4_METMID_METTHK.lef]
+Warning : The variant range of wire parameters is too large. [PHYS-12]
+        : The variant range (0.23, 3) of 'WIDTH' for layers 'MET1' and 'METTPL' is too large.
+        : Make sure to check the consistency of the parameters.
+Warning : The variant range of wire parameters is too large. [PHYS-12]
+        : The variant range (0.61, 6.3) of 'PITCH' for layers 'MET1' and 'METTPL' is too large.
+Warning : The variant range of wire parameters is too large. [PHYS-12]
+        : The variant range (0.23, 2.5) of 'MINSPACING' for layers 'MET1' and 'METTPL' is too large.
+  Library has 464 usable logic and 192 usable sequential lib-cells.
+Info    : Found unusable library cells. [LBR-415]
+        : Library: 'D_CELLS_HD_LP5MOS_typ_1_80V_25C.lib', Total cells: 772, Unusable cells: 114.
+	List of unusable cells: 'DLHRTHDX1 DLHSTHDX1 DLHTHDX1 DLLRTHDX1 DLLSTHDX1 DLLTHDX1 LGCNHDX0 LGCNHDX1 LGCNHDX2 LGCNHDX4 ... and others.'
+        : For more information, refer to 'Cells Identified as Unusable' in the RC User Guide. The number of unusable cells that is listed depends on the setting of the 'information_level' root attribute. If set to a value less than 6, the list is limited to 10 unusable cells. If set to a value equal to or higher than 6, all unusable cells are listed.
+Warning : Marking library cell 'avoid'. [PHYS-103]
+        : The library cell 'CLKVBUFHD' was marked 'avoid' because there was no physical data in the LEF file.
+        : To prevent the library cell from being set to 'avoid', set attribute 'lib_lef_consistency_check_enable' to 'false'.
+  Setting attribute of root '/': 'lef_library' = /Cadence/Libs/X_FAB/XKIT/xt018/cadence/v5_0/techLEF/v5_0_2/xt018_xx43_MET4_METMID_METTHK.lef /Cadence/Libs/X_FAB/XKIT/xt018/diglibs/D_CELLS_HD/v4_0/LEF/v4_0_0/xt018_D_CELLS_HD.lef /Cadence/Libs/X_FAB/XKIT/xt018/diglibs/D_CELLS_HD/v4_0/LEF/v4_0_0/xt018_xx43_MET4_METMID_METTHK_D_CELLS_HD_mprobe.lef
+
+  According to cap_table_file, there are total 6 routing layers [ V(3) / H(3) ]
+
+Warning : The variant range of wire parameters is too large. [PHYS-12]
+        : The variant range (0.23, 3) of 'WIDTH' for layers 'M1' and 'M6' is too large.
+  Setting attribute of root '/': 'cap_table_file' = /Cadence/Libs/X_FAB/XKIT/xt018/cadence/v5_0/capTbl/v5_0_1_2/xt018_xx43_MET4_METMID_METTHK_typ.capTbl
+  Setting attribute of root '/': 'hdl_error_on_blackbox' = true
+Info    : Found unusable library cells. [LBR-415]
+        : Library: 'D_CELLS_HD_LP5MOS_typ_1_80V_25C.lib', Total cells: 772, Unusable cells: 114.
+	List of unusable cells: 'DLHRTHDX1 DLHSTHDX1 DLHTHDX1 DLLRTHDX1 DLLSTHDX1 DLLTHDX1 LGCNHDX0 LGCNHDX1 LGCNHDX2 LGCNHDX4 ... and others.'
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'Non_recursive_CIC1' from file '../Source/Non_recursive_CIC1.v'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'Non_recursive_CIC1'.
+Statistics for commands executed by read_sdc:
+ "create_clock"            - successful      1 , failed      0 (runtime  0.00)
+ "get_clocks"              - successful      2 , failed      0 (runtime  0.00)
+ "get_ports"               - successful      5 , failed      0 (runtime  0.00)
+ "set_clock_uncertainty"   - successful      2 , failed      0 (runtime  0.00)
+ "set_input_delay"         - successful      2 , failed      0 (runtime  0.00)
+Total runtime 0
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 0.99
+Via Resistance      : 4.97 ohm (from cap_table_file)
+Site size           : 5.11 um (from lef [tech+cell])
+
+                                   Capacitance    
+  Layer                             / Length           Data source:
+Name        Direction Utilization  (pF/micron)         cap_table_file
+--------------------------------------------------
+M1              H         1.00        0.000268    
+M2              V         1.00        0.000241    
+M3              H         1.00        0.000241    
+M4              V         1.00        0.000239    
+M5              H         1.00        0.000249    
+M6              V         1.00        0.000249 ** 
+
+** = 'M6' is dropped because its width (3) is too large (threshold 2)
+
+                                    Resistance     
+  Layer                              / Length           Data source:
+Name        Direction Utilization  (ohm/micron)         cap_table_file
+---------------------------------------------------
+M1              H         1.00         0.332640    
+M2              V         1.00         0.262594    
+M3              H         1.00         0.262594    
+M4              V         1.00         0.262594    
+M5              H         1.00         0.076778    
+M6              V         1.00         0.003045 ** 
+
+** = 'M6' is dropped because its width (3) is too large (threshold 2)
+
+                                        Area       
+  Layer                               / Length          Data source:
+Name        Direction Utilization     (micron)          lef_library
+---------------------------------------------------
+MET1            H         1.00         0.230000    
+MET2            V         1.00         0.280000    
+MET3            H         1.00         0.280000    
+MET4            V         1.00         0.280000    
+METTP           H         1.00         0.440000    
+METTPL          V         1.00         3.000000 ** 
+
+** = 'METTPL' is dropped because its width (3) is too large (threshold 2)
+
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 'Non_recursive_CIC1' to generic gates using 'medium' effort.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 10 sequential instances.
+        : Optimizations such as constant propagation or redundancy removal could change the connections so an instance does not drive any primary outputs anymore. To see the list of deleted instances,        set the 'information_level' attribute to 2 or above.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 82 hierarchical instances.
+Info    : Optimizing RTL. [RTLOPT-1]
+        : Optimizing RTL in 'Non_recursive_CIC1' using 'medium' effort.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 2 sequential instances.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 1 hierarchical instance.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 10 hierarchical instances.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 15 hierarchical instances.
+Info    : Grouping carry-save logic. [RTLOPT-19]
+        : Grouping carry-save logic in 'First_Block_H2_z' using 'medium' effort and no timing models.
+Info    : Accepted carry-save configuration. [RTLOPT-20]
+        : Accepted configuration 1 of 1 in module 'First_Block_H2_z'.
+Info    : Done grouping carry-save logic. [RTLOPT-23]
+        : Used configuration 1, resulting in 18 carry-save groups in module 'First_Block_H2_z'.
+Info    : Grouping carry-save logic. [RTLOPT-19]
+        : Grouping carry-save logic in 'First_Block_H2_z_1' using 'medium' effort and no timing models.
+Info    : Accepted carry-save configuration. [RTLOPT-20]
+        : Accepted configuration 1 of 1 in module 'First_Block_H2_z_1'.
+Info    : Done grouping carry-save logic. [RTLOPT-23]
+        : Used configuration 1, resulting in 5 carry-save groups in module 'First_Block_H2_z_1'.
+Info    : Grouping carry-save logic. [RTLOPT-19]
+        : Grouping carry-save logic in 'Non_recursive_CIC1_tc' using 'medium' effort and no timing models.
+Info    : Accepted carry-save configuration. [RTLOPT-20]
+        : Accepted configuration 1 of 1 in module 'Non_recursive_CIC1_tc'.
+Info    : Done grouping carry-save logic. [RTLOPT-23]
+        : Used configuration 1, resulting in 4 carry-save groups in module 'Non_recursive_CIC1_tc'.
+Info    : Grouping carry-save logic. [RTLOPT-19]
+        : Grouping carry-save logic in 'Third_Block_H3_z' using 'medium' effort and no timing models.
+Info    : Accepted carry-save configuration. [RTLOPT-20]
+        : Accepted configuration 1 of 1 in module 'Third_Block_H3_z'.
+Info    : Done grouping carry-save logic. [RTLOPT-23]
+        : Used configuration 1, resulting in 38 carry-save groups in module 'Third_Block_H3_z'.
+Info    : Done optimizing RTL. [RTLOPT-2]
+        : Done optimizing RTL in 'Non_recursive_CIC1'.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 5 sequential instances.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 7 hierarchical instances.
+Info    : Done synthesizing. [SYNTH-2]
+        : Done synthesizing 'Non_recursive_CIC1' to generic gates.
+Info    : Mapping. [SYNTH-4]
+        : Mapping 'Non_recursive_CIC1' using 'medium' effort.
+Multi-threaded constant propagation [1|0] ...
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 2 sequential instances.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 21 sequential instances.
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 1 hierarchical instance.
+Multi-threaded Virtual Mapping    (4 threads per ST process, 4 of 8 CPUs usable)
+ 
+Global mapping target info
+==========================
+Cost Group 'clk' target slack: -167817 ps
+Target path end-point (Pin: Downsample2_bypass_reg_reg[15]/d)
+
+Multi-threaded Technology Mapping (4 threads per ST process, 4 of 8 CPUs usable)
+ 
+Global mapping status
+=====================
+                                   Group   
+                                  Tot Wrst 
+                           Total  Weighted 
+Operation                   Area   Slacks  
+-------------------------------------------------------------------------------
+ global_map              5614349  -184355 
+            Worst cost_group: clk, WNS: -184355.0
+            Path: In1[12] --> Downsample2_bypass_reg_reg[15]/D
+
+    Cost Group            Target    Slack    Clock
+--------------------------------------------------
+           clk           -167817  -184355    50000 
+
+ 
+Global incremental target info
+==============================
+Cost Group 'clk' target slack: -184108 ps
+Target path end-point (Pin: Downsample2_bypass_reg_reg[15]/D (DFRQHDX1/D))
+
+ 
+Global incremental optimization status
+======================================
+                                   Group   
+                                  Tot Wrst 
+                           Total  Weighted 
+Operation                   Area   Slacks  
+-------------------------------------------------------------------------------
+ global_incr             3892218  -185305 
+            Worst cost_group: clk, WNS: -185305.2
+            Path: In1[11] --> Downsample2_bypass_reg_reg[15]/D
+
+    Cost Group            Target    Slack    Clock
+--------------------------------------------------
+           clk           -184108  -185305    50000 
+
+Info    : 'Conformal LEC14.2-p100' or later builds is recommended for verification. [WDO-600]
+        : The use of 'Conformal LEC14.2-p100' or later builds is recommended to get better verification results.
+Generating a dofile for design 'Non_recursive_CIC1' in file 'fv/Non_recursive_CIC1/rtl_to_g1.do' ...
+Info    : Done mapping. [SYNTH-5]
+        : Done mapping 'Non_recursive_CIC1'.
+Info    : Incrementally optimizing. [SYNTH-7]
+        : Incrementally optimizing 'Non_recursive_CIC1' using 'medium' effort.
+============================================================
+The Parallel Incremental Optimization Status
+============================================================
+ 
+Parallel incremental optimization status
+========================================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_piopt              3892218  -185305 -106133045         0        0        0
+            Worst cost_group: clk, WNS: -185305.2
+            Path: In1[11] --> Downsample2_bypass_reg_reg[15]/D
+ hi_fo_buf               3892218  -185305 -106133045         0        0        0
+            Worst cost_group: clk, WNS: -185305.2
+            Path: In1[11] --> Downsample2_bypass_reg_reg[15]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       hi_fo_buf        11  (        0 /        0 )  1.88
+
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay              3892218  -185305 -106133045         0        0        0
+            Worst cost_group: clk, WNS: -185305.2
+            Path: In1[11] --> Downsample2_bypass_reg_reg[15]/D
+ incr_delay              3957309  -182264 -103948027         0        0        0
+            Worst cost_group: clk, WNS: -182264.4
+            Path: In1[15] --> Downsample2_bypass_reg_reg[15]/D
+ incr_delay              3985279  -181638 -103520091         0        0        0
+            Worst cost_group: clk, WNS: -181638.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[15]/D
+ incr_delay              3997095  -181360 -103296806         0        0        0
+            Worst cost_group: clk, WNS: -181360.9
+            Path: In1[11] --> Downsample2_bypass_reg_reg[15]/D
+ incr_delay              4002963  -181218 -103193168         0        0        0
+            Worst cost_group: clk, WNS: -181218.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[15]/D
+ incr_delay              4005870  -181169 -103154712         0        0        0
+            Worst cost_group: clk, WNS: -181169.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[15]/D
+ incr_delay              4006758  -181133 -103115826         0        0        0
+            Worst cost_group: clk, WNS: -181133.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[15]/D
+ incr_delay              4007052  -181130 -103114904         0        0        0
+            Worst cost_group: clk, WNS: -181130.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[15]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz     40137  (     8716 /     9013 )  3828.64
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st     10603  (        0 /        0 )  0.00
+          plc_st     10603  (        0 /        0 )  0.00
+        plc_star     10603  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+            fopt     19240  (     1450 /     1680 )  786.86
+       plc_lo_st     10641  (        0 /        0 )  0.00
+
+ 
+Local TNS optimization status
+=============================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_tns                4007052  -181130 -103114904         0        0        0
+            Worst cost_group: clk, WNS: -181130.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[15]/D
+ incr_tns                4003798  -181047 -103027869         0        0        0
+            Worst cost_group: clk, WNS: -181047.5
+            Path: In1[11] --> Downsample2_bypass_reg_reg[15]/D
+ incr_tns                4003798  -181047 -103027869         0        0        0
+            Worst cost_group: clk, WNS: -181047.5
+            Path: In1[11] --> Downsample2_bypass_reg_reg[15]/D
+ incr_tns                4003798  -181047 -103027869         0        0        0
+            Worst cost_group: clk, WNS: -181047.5
+            Path: In1[11] --> Downsample2_bypass_reg_reg[15]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       crit_upsz      3677  (      209 /      283 )  17.44
+       plc_lo_st      3468  (        0 /        0 )  0.00
+            fopt      3468  (        0 /        0 )  0.55
+       crit_dnsz      6851  (      788 /     1404 )  162.51
+             dup      2680  (        2 /        2 )  20.95
+        setup_dn      2678  (        0 /        0 )  0.01
+
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_iopt               3627969  -180801 -103341018       219     1549        0
+            Worst cost_group: clk, WNS: -180801.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[5]/D
+ const_prop              3627784  -180813 -103360630       219     1549        0
+            Worst cost_group: clk, WNS: -180813.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[5]/D
+ simp_cc_inputs          3624173  -180811 -103359803       219     1549        0
+            Worst cost_group: clk, WNS: -180811.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay              3624173  -180811 -103359803       219     1549        0
+            Worst cost_group: clk, WNS: -180811.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3638328  -179305 -102162004       219     1549        0
+            Worst cost_group: clk, WNS: -179305.1
+            Path: In1[10] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3641775  -179048 -102037513       219     1549        0
+            Worst cost_group: clk, WNS: -179048.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3645058  -178924 -101932607       219     1549        0
+            Worst cost_group: clk, WNS: -178924.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3647288  -178850 -101876754       219     1549        0
+            Worst cost_group: clk, WNS: -178850.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3650102  -178795 -101829714       219     1549        0
+            Worst cost_group: clk, WNS: -178795.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3651794  -178747 -101787738       219     1549        0
+            Worst cost_group: clk, WNS: -178747.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3653750  -178696 -101752161       219     1549        0
+            Worst cost_group: clk, WNS: -178696.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3654677  -178654 -101723563       219     1549        0
+            Worst cost_group: clk, WNS: -178654.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3655190  -178636 -101709387       219     1549        0
+            Worst cost_group: clk, WNS: -178636.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3655630  -178622 -101697046       219     1549        0
+            Worst cost_group: clk, WNS: -178622.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3656498  -178610 -101686530       219     1549        0
+            Worst cost_group: clk, WNS: -178610.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3656851  -178597 -101676238       219     1549        0
+            Worst cost_group: clk, WNS: -178597.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3656901  -178596 -101675675       219     1549        0
+            Worst cost_group: clk, WNS: -178596.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3657001  -178596 -101675498       219     1549        0
+            Worst cost_group: clk, WNS: -178596.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3657157  -178591 -101671751       219     1549        0
+            Worst cost_group: clk, WNS: -178591.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3657312  -178588 -101668392       219     1549        0
+            Worst cost_group: clk, WNS: -178588.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3657317  -178587 -101667688       219     1549        0
+            Worst cost_group: clk, WNS: -178587.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3657612  -178586 -101666220       219     1549        0
+            Worst cost_group: clk, WNS: -178586.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3657707  -178580 -101662149       219     1549        0
+            Worst cost_group: clk, WNS: -178580.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3657801  -178577 -101657767       219     1549        0
+            Worst cost_group: clk, WNS: -178577.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3658082  -178572 -101649564       219     1549        0
+            Worst cost_group: clk, WNS: -178572.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3658328  -178555 -101646276       219     1549        0
+            Worst cost_group: clk, WNS: -178555.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3658436  -178553 -101645033       219     1549        0
+            Worst cost_group: clk, WNS: -178553.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3658472  -178551 -101643764       219     1549        0
+            Worst cost_group: clk, WNS: -178551.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3658463  -178550 -101642774       219     1549        0
+            Worst cost_group: clk, WNS: -178550.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3659656  -178544 -101637580       219     1549        0
+            Worst cost_group: clk, WNS: -178544.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3659729  -178541 -101635314       219     1549        0
+            Worst cost_group: clk, WNS: -178541.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3659788  -178541 -101634858       219     1549        0
+            Worst cost_group: clk, WNS: -178541.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3660020  -178538 -101634462       219     1549        0
+            Worst cost_group: clk, WNS: -178538.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3660107  -178537 -101634183       219     1549        0
+            Worst cost_group: clk, WNS: -178537.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3660367  -178536 -101633932       219     1549        0
+            Worst cost_group: clk, WNS: -178536.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3660484  -178535 -101633740       219     1549        0
+            Worst cost_group: clk, WNS: -178535.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3660559  -178535 -101633614       219     1549        0
+            Worst cost_group: clk, WNS: -178535.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3660577  -178535 -101633588       219     1549        0
+            Worst cost_group: clk, WNS: -178535.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3660812  -178533 -101633369       219     1549        0
+            Worst cost_group: clk, WNS: -178533.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3661000  -178532 -101633317       219     1549        0
+            Worst cost_group: clk, WNS: -178532.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3661077  -178532 -101633261       219     1549        0
+            Worst cost_group: clk, WNS: -178532.4
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3661160  -178531 -101633168       219     1549        0
+            Worst cost_group: clk, WNS: -178531.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3661243  -178530 -101632842       219     1549        0
+            Worst cost_group: clk, WNS: -178530.4
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3661614  -178528 -101632583       219     1549        0
+            Worst cost_group: clk, WNS: -178528.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3661706  -178528 -101632500       219     1549        0
+            Worst cost_group: clk, WNS: -178528.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3661743  -178528 -101632488       219     1549        0
+            Worst cost_group: clk, WNS: -178528.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3661918  -178527 -101632366       219     1549        0
+            Worst cost_group: clk, WNS: -178527.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662345  -178526 -101632068       219     1549        0
+            Worst cost_group: clk, WNS: -178526.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662420  -178526 -101631889       219     1549        0
+            Worst cost_group: clk, WNS: -178526.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662513  -178524 -101631581       219     1549        0
+            Worst cost_group: clk, WNS: -178524.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662617  -178523 -101631268       219     1549        0
+            Worst cost_group: clk, WNS: -178523.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662634  -178523 -101631268       219     1549        0
+            Worst cost_group: clk, WNS: -178523.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662719  -178522 -101631104       219     1549        0
+            Worst cost_group: clk, WNS: -178522.4
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662774  -178521 -101631012       219     1549        0
+            Worst cost_group: clk, WNS: -178521.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662788  -178520 -101629587       219     1549        0
+            Worst cost_group: clk, WNS: -178520.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662875  -178519 -101629276       219     1549        0
+            Worst cost_group: clk, WNS: -178519.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662882  -178519 -101629258       219     1549        0
+            Worst cost_group: clk, WNS: -178519.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663025  -178519 -101628875       219     1549        0
+            Worst cost_group: clk, WNS: -178519.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663082  -178518 -101628765       219     1549        0
+            Worst cost_group: clk, WNS: -178518.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663268  -178517 -101628159       219     1549        0
+            Worst cost_group: clk, WNS: -178517.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663325  -178517 -101628094       219     1549        0
+            Worst cost_group: clk, WNS: -178517.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663586  -178514 -101626899       219     1549        0
+            Worst cost_group: clk, WNS: -178514.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663657  -178513 -101626647       219     1549        0
+            Worst cost_group: clk, WNS: -178513.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663665  -178512 -101625871       219     1549        0
+            Worst cost_group: clk, WNS: -178512.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663737  -178512 -101625759       219     1549        0
+            Worst cost_group: clk, WNS: -178512.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz     96551  (     2452 /     2695 )  1238.57
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st     80081  (        0 /        0 )  0.00
+          plc_st     80081  (        0 /        0 )  0.00
+        plc_star     80081  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st     80081  (        0 /        0 )  0.00
+            fopt     80081  (        0 /        0 )  2.18
+       crit_dnsz    213598  (     1421 /     2095 )  1202.09
+             dup     81008  (       33 /       39 )  52.95
+            fopt     85977  (      668 /     1653 )  795.10
+        setup_dn     80213  (        4 /        4 )  3.24
+         buf2inv     80190  (        0 /        0 )  0.16
+             exp      1528  (       61 /      425 )  266.25
+       gate_deco     87484  (       82 /      109 )  1130.32
+       gcomp_tim     84462  (      177 /      441 )  474.65
+  inv_pair_2_buf     97487  (        0 /        0 )  0.55
+
+ init_drc                3663737  -178512 -101625759       219     1549        0
+            Worst cost_group: clk, WNS: -178512.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_max_trans          3663934  -178512 -101625759         0        0        0
+            Worst cost_group: clk, WNS: -178512.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         1  (        0 /        0 )  0.00
+        plc_star         1  (        0 /        0 )  0.00
+        drc_bufs         2  (        1 /        1 )  0.10
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_tns                3663934  -178512 -101625759         0        0        0
+            Worst cost_group: clk, WNS: -178512.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_tns                3661784  -178498 -101486713         0        0        0
+            Worst cost_group: clk, WNS: -178498.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_tns                3661784  -178498 -101486713         0        0        0
+            Worst cost_group: clk, WNS: -178498.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_tns                3661784  -178498 -101486713         0        0        0
+            Worst cost_group: clk, WNS: -178498.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       crit_upsz      4958  (      269 /      374 )  28.56
+       plc_lo_st      4689  (        0 /        0 )  0.00
+            fopt      4689  (        0 /        0 )  0.98
+       crit_dnsz     11555  (      730 /     1653 )  109.65
+             dup      3959  (        0 /        1 )  15.46
+        setup_dn      3959  (        0 /        0 )  0.91
+         buf2inv      3959  (        0 /        0 )  0.01
+
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay              3661784  -178498 -101486713         0        0        0
+            Worst cost_group: clk, WNS: -178498.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3662357  -178479 -101473804         0        0        0
+            Worst cost_group: clk, WNS: -178479.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663137  -178460 -101461136         0        0        0
+            Worst cost_group: clk, WNS: -178460.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663798  -178449 -101455476         0        0        0
+            Worst cost_group: clk, WNS: -178449.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3663901  -178441 -101448778         0        0        0
+            Worst cost_group: clk, WNS: -178441.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3664102  -178435 -101445295         0        0        0
+            Worst cost_group: clk, WNS: -178435.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3664216  -178432 -101443404         0        0        0
+            Worst cost_group: clk, WNS: -178432.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3664349  -178430 -101441313         0        0        0
+            Worst cost_group: clk, WNS: -178430.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3664431  -178429 -101441206         0        0        0
+            Worst cost_group: clk, WNS: -178429.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3664517  -178428 -101440424         0        0        0
+            Worst cost_group: clk, WNS: -178428.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3664587  -178424 -101436496         0        0        0
+            Worst cost_group: clk, WNS: -178424.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3664672  -178422 -101435119         0        0        0
+            Worst cost_group: clk, WNS: -178422.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3664737  -178422 -101434984         0        0        0
+            Worst cost_group: clk, WNS: -178422.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665189  -178421 -101434814         0        0        0
+            Worst cost_group: clk, WNS: -178421.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665315  -178420 -101434190         0        0        0
+            Worst cost_group: clk, WNS: -178420.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665405  -178418 -101433054         0        0        0
+            Worst cost_group: clk, WNS: -178418.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665440  -178416 -101430081         0        0        0
+            Worst cost_group: clk, WNS: -178416.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665502  -178414 -101428290         0        0        0
+            Worst cost_group: clk, WNS: -178414.4
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665517  -178409 -101424118         0        0        0
+            Worst cost_group: clk, WNS: -178409.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665652  -178408 -101423568         0        0        0
+            Worst cost_group: clk, WNS: -178408.4
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665750  -178406 -101422109         0        0        0
+            Worst cost_group: clk, WNS: -178406.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665795  -178404 -101420808         0        0        0
+            Worst cost_group: clk, WNS: -178404.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665892  -178403 -101419051         0        0        0
+            Worst cost_group: clk, WNS: -178403.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665910  -178402 -101417981         0        0        0
+            Worst cost_group: clk, WNS: -178402.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665930  -178402 -101417981         0        0        0
+            Worst cost_group: clk, WNS: -178402.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666065  -178401 -101417572         0        0        0
+            Worst cost_group: clk, WNS: -178401.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666215  -178401 -101417296         0        0        0
+            Worst cost_group: clk, WNS: -178401.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666359  -178400 -101416891         0        0        0
+            Worst cost_group: clk, WNS: -178400.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666408  -178396 -101414030         0        0        0
+            Worst cost_group: clk, WNS: -178396.4
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666577  -178386 -101403924         0        0        0
+            Worst cost_group: clk, WNS: -178386.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666677  -178384 -101402133         0        0        0
+            Worst cost_group: clk, WNS: -178384.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666939  -178381 -101398679         0        0        0
+            Worst cost_group: clk, WNS: -178381.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666980  -178378 -101396073         0        0        0
+            Worst cost_group: clk, WNS: -178378.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666975  -178377 -101395172         0        0        0
+            Worst cost_group: clk, WNS: -178377.9
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3667033  -178376 -101393624         0        0        0
+            Worst cost_group: clk, WNS: -178376.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz     50948  (      403 /      690 )  310.75
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st     45438  (        0 /        0 )  0.00
+          plc_st     45438  (        0 /        0 )  0.00
+        plc_star     45438  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st     45438  (        0 /        0 )  0.00
+            fopt     45438  (        0 /        0 )  1.19
+       crit_dnsz    117199  (      256 /      600 )  351.94
+             dup     45958  (       15 /       17 )  26.35
+            fopt     46802  (       85 /      623 )  304.13
+        setup_dn     45520  (        0 /        0 )  0.05
+         buf2inv     45520  (        0 /        0 )  0.09
+             exp       491  (       32 /      199 )  115.77
+       gate_deco     44947  (       25 /       29 )  512.59
+       gcomp_tim     36359  (       35 /      148 )  176.49
+  inv_pair_2_buf     61766  (        0 /        0 )  0.43
+
+ init_drc                3667033  -178376 -101393624         0        0        0
+            Worst cost_group: clk, WNS: -178376.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_tns                3667033  -178376 -101393624         0        0        0
+            Worst cost_group: clk, WNS: -178376.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_tns                3666232  -178370 -101376486         0        0        0
+            Worst cost_group: clk, WNS: -178370.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_tns                3666232  -178370 -101376486         0        0        0
+            Worst cost_group: clk, WNS: -178370.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       crit_upsz      1239  (       54 /      142 )  8.66
+       plc_lo_st      1185  (        0 /        0 )  0.00
+            fopt      1185  (        0 /        0 )  0.91
+       crit_dnsz      3734  (      222 /      503 )  37.72
+             dup       963  (        0 /        0 )  3.01
+        setup_dn       963  (        0 /        0 )  0.21
+         buf2inv       963  (        0 /        0 )  0.00
+
+
+
+       ------------------------------------------------------------
+                             Runtime Summary                       
+              time taken in clock gating         : 0.00 sec
+              time taken in initial cleanup      : 5055.39 sec
+              time taken in design partition     : 18.85 sec
+              time taken in parallel iopt runs   : 5234.95 sec
+              time taken in final cleanup        : 7550.22 sec
+       ------------------------------------------------------------
+
+
+============================================================
+The Parallel Incremental Optimization Completed
+============================================================
+Info    : Done incrementally optimizing. [SYNTH-8]
+        : Done incrementally optimizing 'Non_recursive_CIC1'.
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 0.99
+Via Resistance      : 4.97 ohm (from cap_table_file)
+Site size           : 5.11 um (from lef [tech+cell])
+
+                                   Capacitance    
+  Layer                             / Length           Data source:
+Name        Direction Utilization  (pF/micron)         cap_table_file
+--------------------------------------------------
+M1              H         1.00        0.000268    
+M2              V         1.00        0.000241    
+M3              H         1.00        0.000241    
+M4              V         1.00        0.000239    
+M5              H         1.00        0.000249    
+M6              V         1.00        0.000249 ** 
+
+** = 'M6' is dropped because its width (3) is too large (threshold 2)
+
+                                    Resistance     
+  Layer                              / Length           Data source:
+Name        Direction Utilization  (ohm/micron)         cap_table_file
+---------------------------------------------------
+M1              H         1.00         0.332640    
+M2              V         1.00         0.262594    
+M3              H         1.00         0.262594    
+M4              V         1.00         0.262594    
+M5              H         1.00         0.076778    
+M6              V         1.00         0.003045 ** 
+
+** = 'M6' is dropped because its width (3) is too large (threshold 2)
+
+                                        Area       
+  Layer                               / Length          Data source:
+Name        Direction Utilization     (micron)          lef_library
+---------------------------------------------------
+MET1            H         1.00         0.230000    
+MET2            V         1.00         0.280000    
+MET3            H         1.00         0.280000    
+MET4            V         1.00         0.280000    
+METTP           H         1.00         0.440000    
+METTPL          V         1.00         3.000000 ** 
+
+** = 'METTPL' is dropped because its width (3) is too large (threshold 2)
+
+Info    : Incrementally optimizing. [SYNTH-7]
+        : Incrementally optimizing 'Non_recursive_CIC1' using 'medium' effort.
+Warning : The Parallel Incremental Optimization failed. [MAP-136]
+        : Cannot run parallel IOPT, design size less than 130000
+        : Switching to Normal Incremental Optimization flow.
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_iopt               3666232  -178370 -101376486         0        0        0
+            Worst cost_group: clk, WNS: -178370.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ const_prop              3666219  -178370 -101376472         0        0        0
+            Worst cost_group: clk, WNS: -178370.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ simp_cc_inputs          3664708  -178370 -101375974         0        0        0
+            Worst cost_group: clk, WNS: -178370.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay              3664708  -178370 -101375974         0        0        0
+            Worst cost_group: clk, WNS: -178370.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665071  -178363 -101373045         0        0        0
+            Worst cost_group: clk, WNS: -178363.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665492  -178339 -101350849         0        0        0
+            Worst cost_group: clk, WNS: -178339.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665550  -178333 -101340508         0        0        0
+            Worst cost_group: clk, WNS: -178333.2
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3665988  -178326 -101336318         0        0        0
+            Worst cost_group: clk, WNS: -178326.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666107  -178323 -101332307         0        0        0
+            Worst cost_group: clk, WNS: -178323.4
+            Path: In1[10] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666281  -178319 -101329245         0        0        0
+            Worst cost_group: clk, WNS: -178319.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666467  -178317 -101326874         0        0        0
+            Worst cost_group: clk, WNS: -178317.1
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3666820  -178309 -101319183         0        0        0
+            Worst cost_group: clk, WNS: -178309.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3667611  -178296 -101309983         0        0        0
+            Worst cost_group: clk, WNS: -178296.4
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3667974  -178285 -101302790         0        0        0
+            Worst cost_group: clk, WNS: -178285.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3668349  -178280 -101299305         0        0        0
+            Worst cost_group: clk, WNS: -178280.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3668828  -178275 -101295244         0        0        0
+            Worst cost_group: clk, WNS: -178275.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3668800  -178273 -101294033         0        0        0
+            Worst cost_group: clk, WNS: -178273.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz     20144  (      242 /      286 )  100.92
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st     18159  (        0 /        0 )  0.00
+          plc_st     18159  (        0 /        0 )  0.00
+        plc_star     18159  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st     18159  (        0 /        0 )  0.00
+            fopt     18159  (        0 /        0 )  0.46
+       crit_dnsz     46790  (      159 /      277 )  151.14
+             dup     18385  (       13 /       14 )  12.71
+            fopt     18594  (       58 /      285 )  131.36
+        setup_dn     18179  (        0 /        0 )  0.03
+         buf2inv     18179  (        0 /        0 )  0.03
+             exp      1443  (       12 /      383 )  235.20
+       gate_deco     21135  (       18 /       19 )  247.17
+       gcomp_tim     14515  (       16 /       47 )  64.24
+  inv_pair_2_buf     22452  (        0 /        0 )  0.11
+
+ init_drc                3668800  -178273 -101294033         0        0        0
+            Worst cost_group: clk, WNS: -178273.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+      drc_buf_sp         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_tns                3668800  -178273 -101294033         0        0        0
+            Worst cost_group: clk, WNS: -178273.0
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ incr_tns                3666974  -178252 -101270638         0        0        0
+            Worst cost_group: clk, WNS: -178252.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+ incr_tns                3666974  -178252 -101270638         0        0        0
+            Worst cost_group: clk, WNS: -178252.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       crit_upsz      8903  (      134 /      299 )  24.43
+       plc_lo_st      8769  (        0 /        0 )  0.00
+            fopt      8769  (        0 /        0 )  1.61
+       crit_dnsz     20815  (      683 /     2252 )  186.26
+             dup      8086  (        0 /        0 )  31.28
+        setup_dn      8086  (        0 /        0 )  0.80
+         buf2inv      8086  (        0 /        0 )  0.01
+
+ init_area               3666974  -178252 -101270638         0        0        0
+            Worst cost_group: clk, WNS: -178252.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+ undup                   3665028  -178252 -101270253         0        0        0
+            Worst cost_group: clk, WNS: -178252.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+ rem_buf                 3651093  -178252 -101261802         0        0        0
+            Worst cost_group: clk, WNS: -178252.7
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+ rem_inv                 3647352  -178252 -101259564         0        0        0
+            Worst cost_group: clk, WNS: -178252.6
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+ merge_bi                3643553  -178251 -101258548         0        0        0
+            Worst cost_group: clk, WNS: -178251.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+ rem_inv_qb              3643534  -178251 -101258539         0        0        0
+            Worst cost_group: clk, WNS: -178251.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+ io_phase                3640389  -178251 -101257821         0        0        0
+            Worst cost_group: clk, WNS: -178251.5
+            Path: In1[15] --> Downsample2_bypass_reg_reg[13]/D
+ gate_comp               3632116  -178244 -101257407         0        0        0
+            Worst cost_group: clk, WNS: -178244.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ gcomp_mog               3631996  -178244 -101257440         0        0        0
+            Worst cost_group: clk, WNS: -178244.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ glob_area               3631564  -178244 -101257424         0        0        0
+            Worst cost_group: clk, WNS: -178244.3
+            Path: In1[15] --> Downsample2_bypass_reg_reg[16]/D
+ area_down               3619840  -178243 -101257831         0        0        0
+            Worst cost_group: clk, WNS: -178243.8
+            Path: In1[15] --> Downsample2_bypass_reg_reg[12]/D
+ rem_buf                 3616996  -178243 -101257251         0        0        0
+            Worst cost_group: clk, WNS: -178243.8
+            Path: In1[5] --> Downsample2_bypass_reg_reg[12]/D
+ rem_inv                 3616531  -178243 -101257096         0        0        0
+            Worst cost_group: clk, WNS: -178243.8
+            Path: In1[5] --> Downsample2_bypass_reg_reg[12]/D
+ merge_bi                3616013  -178243 -101257091         0        0        0
+            Worst cost_group: clk, WNS: -178243.5
+            Path: In1[5] --> Downsample2_bypass_reg_reg[12]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+           undup       565  (       73 /       92 )  11.54
+         rem_buf      7129  (      716 /      933 )  73.59
+         rem_inv      2368  (      223 /      247 )  14.13
+        merge_bi       795  (      248 /      297 )  24.41
+      rem_inv_qb         4  (        2 /        2 )  0.22
+        io_phase      4825  (      166 /      238 )  35.33
+       gate_comp     29013  (      340 /     1333 )  276.56
+       gcomp_mog       154  (        5 /        5 )  14.50
+       glob_area        87  (       36 /       87 )  44.67
+       area_down      4273  (     1054 /     2842 )  656.92
+  gate_deco_area         0  (        0 /        0 )  0.14
+         rem_buf      6389  (      155 /      309 )  56.78
+         rem_inv      2061  (       34 /       53 )  10.40
+        merge_bi       558  (       46 /       74 )  12.60
+      rem_inv_qb         0  (        0 /        0 )  0.02
+
+ 
+Incremental optimization status
+===============================
+                                   Group   
+                                  Tot Wrst     Total - - - - DRC Totals - - - -
+                           Total  Weighted      Neg      Max       Max     Max  
+Operation                   Area   Slacks      Slack    Trans      Cap   Fanout 
+-------------------------------------------------------------------------------
+ init_delay              3616013  -178243 -101257091         0        0        0
+            Worst cost_group: clk, WNS: -178243.5
+            Path: In1[5] --> Downsample2_bypass_reg_reg[12]/D
+ incr_delay              3617436  -178227 -101250103         0        0        0
+            Worst cost_group: clk, WNS: -178227.4
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3618096  -178222 -101248558         0        0        0
+            Worst cost_group: clk, WNS: -178222.9
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3618303  -178216 -101246967         0        0        0
+            Worst cost_group: clk, WNS: -178216.9
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3618703  -178211 -101245348         0        0        0
+            Worst cost_group: clk, WNS: -178211.6
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3618860  -178203 -101243798         0        0        0
+            Worst cost_group: clk, WNS: -178203.9
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3618915  -178201 -101243419         0        0        0
+            Worst cost_group: clk, WNS: -178201.7
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3618950  -178201 -101243315         0        0        0
+            Worst cost_group: clk, WNS: -178201.4
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3619092  -178200 -101243161         0        0        0
+            Worst cost_group: clk, WNS: -178200.7
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3619129  -178198 -101242497         0        0        0
+            Worst cost_group: clk, WNS: -178198.1
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3619137  -178197 -101242302         0        0        0
+            Worst cost_group: clk, WNS: -178197.8
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3619204  -178197 -101242245         0        0        0
+            Worst cost_group: clk, WNS: -178197.7
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3619528  -178195 -101241749         0        0        0
+            Worst cost_group: clk, WNS: -178195.0
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3620004  -178192 -101240660         0        0        0
+            Worst cost_group: clk, WNS: -178192.4
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3620252  -178191 -101239985         0        0        0
+            Worst cost_group: clk, WNS: -178191.4
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3620384  -178190 -101239542         0        0        0
+            Worst cost_group: clk, WNS: -178190.7
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3620456  -178190 -101239383         0        0        0
+            Worst cost_group: clk, WNS: -178190.5
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3620592  -178188 -101238089         0        0        0
+            Worst cost_group: clk, WNS: -178188.7
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3620609  -178188 -101238089         0        0        0
+            Worst cost_group: clk, WNS: -178188.7
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3620620  -178188 -101238089         0        0        0
+            Worst cost_group: clk, WNS: -178188.7
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3620768  -178186 -101237416         0        0        0
+            Worst cost_group: clk, WNS: -178186.9
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3621074  -178186 -101237102         0        0        0
+            Worst cost_group: clk, WNS: -178186.0
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3621124  -178185 -101236899         0        0        0
+            Worst cost_group: clk, WNS: -178185.3
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3621199  -178184 -101236568         0        0        0
+            Worst cost_group: clk, WNS: -178184.2
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3621208  -178184 -101236538         0        0        0
+            Worst cost_group: clk, WNS: -178184.1
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ incr_delay              3621216  -178183 -101236458         0        0        0
+            Worst cost_group: clk, WNS: -178183.6
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+       crit_upsz     37680  (      386 /      554 )  240.94
+    plc_bal_star         0  (        0 /        0 )  0.00
+     drc_buftimb         0  (        0 /        0 )  0.00
+          plc_st     34043  (        0 /        0 )  0.00
+          plc_st     34043  (        0 /        0 )  0.00
+        plc_star     34043  (        0 /        0 )  0.00
+     drc_buftims         0  (        0 /        0 )  0.00
+       plc_lo_st     34043  (        0 /        0 )  0.00
+            fopt     34043  (        0 /        0 )  0.92
+       crit_dnsz     85741  (      189 /      517 )  305.69
+             dup     34140  (        6 /        9 )  19.07
+            fopt     35024  (       80 /      483 )  239.80
+        setup_dn     34072  (        2 /        2 )  0.89
+         buf2inv     34060  (        0 /        0 )  0.07
+             exp       331  (       23 /      120 )  55.89
+       gate_deco     33171  (       19 /      124 )  411.57
+       gcomp_tim     28381  (       27 /      144 )  157.06
+  inv_pair_2_buf     43952  (        0 /        0 )  0.26
+
+ init_drc                3621216  -178183 -101236458         0        0        0
+            Worst cost_group: clk, WNS: -178183.6
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+      simple_buf         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+          plc_st         0  (        0 /        0 )  0.00
+        plc_star         0  (        0 /        0 )  0.00
+        drc_bufs         0  (        0 /        0 )  0.00
+        drc_fopt         0  (        0 /        0 )  0.00
+        drc_bufb         0  (        0 /        0 )  0.00
+             dup         0  (        0 /        0 )  0.00
+       crit_dnsz         0  (        0 /        0 )  0.00
+       crit_upsz         0  (        0 /        0 )  0.00
+
+ init_area               3621216  -178183 -101236458         0        0        0
+            Worst cost_group: clk, WNS: -178183.6
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ gate_comp               3618163  -178183 -101237099         0        0        0
+            Worst cost_group: clk, WNS: -178183.4
+            Path: In1[5] --> Downsample2_bypass_reg_reg[16]/D
+ area_down               3612503  -178183 -101237716         0        0        0
+            Worst cost_group: clk, WNS: -178183.2
+            Path: In1[5] --> Downsample2_bypass_reg_reg[10]/D
+
+           Trick     Calls     Accepts   Attempts    Time(secs) 
+-----------------------------------------------------------
+           undup         0  (        0 /        0 )  0.00
+         rem_buf         0  (        0 /        0 )  0.00
+         rem_inv         0  (        0 /        0 )  0.00
+        merge_bi         0  (        0 /        0 )  0.00
+      rem_inv_qb         0  (        0 /        0 )  0.02
+        io_phase         0  (        0 /        0 )  0.00
+       gate_comp     28533  (      134 /     1050 )  252.28
+       gcomp_mog         0  (        0 /        0 )  0.00
+       glob_area         0  (        0 /        0 )  0.00
+       area_down      2816  (      500 /     1698 )  402.17
+  gate_deco_area         0  (        0 /        0 )  0.00
+
+Info    : Done incrementally optimizing. [SYNTH-8]
+        : Done incrementally optimizing 'Non_recursive_CIC1'.
+Warning : Possible timing problems have been detected in this design. [TIM-11]
+        : The design is 'Non_recursive_CIC1'.
+        : Use 'report timing -lint' for more information.
+Finished SDC export (command execution time mm:ss (real) = 00:02).
+rc:/> Warning : Instance count threshold exceeded.  Switching to manual update mode. [GUI-12]
+        : Current instance count: '97373', threshold: '2000'
+        : To change the threshold set the 'gui_sv_threshold' root attribute.
+  Setting attribute of root '/': 'gui_sv_update' = manual
+Info    : The schematic is in manual update mode. [GUI-10]
+        : To change update mode set the 'gui_sv_update' root attribute to 'auto' or 'manual'.
+Info    : The schematic is in manual update mode. [GUI-10]
+Info    : The schematic is in manual update mode. [GUI-10]
+report timing -lint
+============================================================
+  Generated by:           Encounter(R) RTL Compiler RC14.27 - v14.20-s064_1
+  Generated on:           Dec 13 2021  11:18:41 am
+  Module:                 Non_recursive_CIC1
+  Technology library:     D_CELLS_HD_LP5MOS_typ_1_80V_25C 4.0.0
+  Operating conditions:   typ_1_80V_25C 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+-------------------------------------------------------------------------------
+Inputs without clocked external delays
+
+The following primary inputs have no clocked external delays.  As a result the  
+timing paths leading from the ports have no timing constraints derived from     
+clock waveforms.  The'external_delay' command is used to create new external    
+delays.                                                                         
+
+/designs/Non_recursive_CIC1/ports_in/clk_enable
+/designs/Non_recursive_CIC1/ports_in/reset_x
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Outputs without clocked external delays
+
+The following primary outputs have no clocked external delays.  As a result the 
+timing paths leading to the ports have no timing constraints derived from clock 
+waveforms.  The'external_delay' command is used to create new external delays.  
+
+/designs/Non_recursive_CIC1/ports_out/Out1[0]
+/designs/Non_recursive_CIC1/ports_out/Out1[10]
+/designs/Non_recursive_CIC1/ports_out/Out1[11]
+  ... 17 other warnings in this category.
+ Use the -verbose option for more details.
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Inputs without external driver/transition
+
+The following primary inputs have no external driver or input transition set.   
+As a result the transition on the ports will be assumed as zero. The            
+'external_driver' attribute is used to add and external driver or the           
+'fixed_slew' attribute to add an external transition.                           
+
+/designs/Non_recursive_CIC1/ports_in/In1[0]
+/designs/Non_recursive_CIC1/ports_in/In1[10]
+/designs/Non_recursive_CIC1/ports_in/In1[11]
+  ... 18 other warnings in this category.
+ Use the -verbose option for more details.
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Outputs without external load
+
+The following primary outputs have no external load set. As a result the load   
+on the ports will be assumed as zero. The 'external_pin_cap' attribute is used  
+to add and external pin cap.                                                    
+
+/designs/Non_recursive_CIC1/ports_out/Out1[0]
+/designs/Non_recursive_CIC1/ports_out/Out1[10]
+/designs/Non_recursive_CIC1/ports_out/Out1[11]
+  ... 17 other warnings in this category.
+ Use the -verbose option for more details.
+-------------------------------------------------------------------------------
+
+
+Lint summary
+ Unconnected/logic driven clocks                                  0
+ Sequential data pins driven by a clock signal                    0
+ Sequential clock pins without clock waveform                     0
+ Sequential clock pins with multiple clock waveforms              0
+ Generated clocks without clock waveform                          0
+ Generated clocks with incompatible options                       0
+ Generated clocks with multi-master clock                         0
+ Paths constrained with different clocks                          0
+ Loop-breaking cells for combinational feedback                   0
+ Nets with multiple drivers                                       0
+ Timing exceptions with no effect                                 0
+ Suspicious multi_cycle exceptions                                0
+ Pins/ports with conflicting case constants                       0
+ Inputs without clocked external delays                           2
+ Outputs without clocked external delays                         20
+ Inputs without external driver/transition                       21
+ Outputs without external load                                   20
+ Exceptions with invalid timing start-/endpoints                  0
+
+                                                  Total:         63
+
+rc:/> Info    : The schematic is in manual update mode. [GUI-10]
+Info    : The schematic is in manual update mode. [GUI-10]
+Info    : The schematic is in manual update mode. [GUI-10]
+Info    : The schematic is in manual update mode. [GUI-10]
+Normal exit.
